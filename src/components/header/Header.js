@@ -10,7 +10,7 @@ from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from "../navbar/Navbar";
 import "./header.css";
-
+import { Link } from "react-router-dom";
 
   
  function Header(){
@@ -20,7 +20,7 @@ import "./header.css";
           <div className="header">
             <div class="headerContainer">
               <div className="headerList">
-                <div className="headerListItem active">
+                <div className="headerListItem">
                   <FontAwesomeIcon icon={faPlane} />
                   <span>Flights</span>
                 </div>
@@ -36,9 +36,12 @@ import "./header.css";
                   <FontAwesomeIcon icon={faPiggyBank} />
                   <span>Find deals</span>
                 </div>
-                <div className="headerListItem">
-                  <FontAwesomeIcon icon={faMessage} />
-                  <span>Feedback</span>
+                <div className="headerListItem ">
+                  <Link to="/feedback" className="link">
+                    <FontAwesomeIcon icon={faMessage} />
+                    <span>Feedback</span>
+                 </Link>
+
                 </div>
               </div>
               <div class="headerTitle">

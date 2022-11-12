@@ -1,7 +1,13 @@
-
+import React from "react"
+import Header from "../../components/header/Header"
 function FlightList(){
     return(
-        <h1>flight List display here</h1>
+        <div>
+            <Header/>
+            <h1>flight List display here</h1>
+
+        </div>
+       
     )
 }
 
