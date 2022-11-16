@@ -1,0 +1,14 @@
+.flightInfoBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #424874;
+    margin-bottom: 50px;
+}
+.flightInfoContainer{
+    margin-bottom:  15px;
+}
+
+.airport{
+    font-size: 18px;
+    font-weight: bold;
+}
