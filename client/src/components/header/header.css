@@ -9,7 +9,7 @@
   .headerContainer {
     width: 100%;
     max-width: 1024px;
-    margin: 20px 0px 100px 0px;
+    margin: 20px 0px 50px 0px;
   }
   
   .headerContainer.listMode {
@@ -53,7 +53,6 @@
   .headerSearch {
     height: 30px;
     background-color: white;
-    border: 3px solid #febb02;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -86,4 +85,10 @@
   }
   
 
-  
+  .link{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #DCD6F7;
+  }
