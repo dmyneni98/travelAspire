@@ -11,8 +11,13 @@ function Navbar () {
           <span className="logo">Trip Aspire</span>
         </Link>
         <div className="navItems">
+          <Link to="/login">
             <button className="navButton">Login</button>
+            </Link>
+            
+            <Link to="/signup">
             <button className="navButton">Sign Up</button>
+            </Link>
         </div>
 
       </div>
