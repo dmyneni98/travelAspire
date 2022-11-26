@@ -3,13 +3,13 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { useState,useContext } from "react";
-import { userInputs } from "./formSource";
+
 import Home from "./pages/home/Home";
 import FlightList from "./pages/flights/FlightList";
 import Feedback from "./pages/Feedback/Feedback";
 import Login from "./pages/login/Login"
 import Signme from "./pages/signup/Signup";
+import DealList from "./pages/deals/Deals"
 
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
         <Route path="/feedback" element={<Feedback/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signme/>} />
+        <Route path="/deals" element={<DealList/>} />
       </Routes>
     </BrowserRouter>
   );

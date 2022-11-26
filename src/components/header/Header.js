@@ -33,8 +33,10 @@ import { Link } from "react-router-dom";
                   <span>Flight+Hotel</span>
                 </div>
                 <div className="headerListItem">
+                <Link to="/deals" className="link">
                   <FontAwesomeIcon icon={faPiggyBank} />
                   <span>Find deals</span>
+                 </Link> 
                 </div>
                 <div className="headerListItem ">
                   <Link to="/feedback" className="link">

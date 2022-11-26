@@ -19,6 +19,9 @@ export const LoginInfo = ()=>{
     try {
       const res = await axios.post("http://localhost:8800/auth/login", credentials);
       //dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
+      //console.log(res.data.details.firstname)
+      localStorage.setItem("user", res.data.details.firstname);
+      
       navigate("/");
       
     } catch (err) {

@@ -19,4 +19,6 @@ router.get("/:id", getDeal);
 router.get("/", getDeals);
 
 
+
+
 export default router
