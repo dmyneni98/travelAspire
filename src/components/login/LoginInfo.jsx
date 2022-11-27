@@ -26,6 +26,7 @@ const LoginInfo = () => {
       const res = await axios.post("http://localhost:8800/auth/login", credentials);
       //dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
       localStorage.setItem("user",res.data.details.username)
+      localStorage.setItem("userid",res.data.details._id)
       navigate("/")
     } catch (err) {
       //dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });

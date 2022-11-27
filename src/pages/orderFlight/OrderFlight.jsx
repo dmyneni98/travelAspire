@@ -72,10 +72,12 @@ function OrderFlight(){
 
         // store flights to user
         let flightData = ""
+        let userurl="http://localhost:8800/users/"+localStorage.getItem("userid")
+        console.log(userurl)
         flightsList.map((flight)=>(
             flightData = {flight:flight._id, numPassenger : number.passenger },  
             flightReservation.push(flightData)))  
-        fetch(`http://localhost:8800/users/${userId._id}`,{
+        fetch(userurl,{
             method: 'PUT', // or 'PUT'
             headers: {'Content-Type': 'application/json',},
             body: JSON.stringify({
