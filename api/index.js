@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/users.js";
 import dealsRoute from "./routes/deals.js";
+import flightRouter from "./routes/flights.js";
+import feedbackRouter from "./routes/feedback.js";
 import cors from "cors";
 
 const app= express();
@@ -24,7 +26,9 @@ app.use(express.json());
 app.use(cors())       
 app.use("/auth", authRoute);
 app.use("/users", usersRoute);
-app.use("/deals", dealsRoute);      
+app.use("/deals", dealsRoute);
+app.use("/api/flights",flightRouter);
+app.use("/api/feedback",feedbackRouter);      
 
 app.get("/",(req,res)=> {
   res.send("welcome back!!!")

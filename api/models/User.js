@@ -51,7 +51,20 @@ const UserSchema = new mongoose.Schema(
       },
       creditzip:{
         type:String
-      }
+      },
+      mileage:{
+        type:Number,
+        required: true,
+    },
+      flightOrder:{
+          type: [
+              {
+                  flight: { type: String },
+                  numPassenger: { type: Number }
+              }
+          ],
+          default: [],
+      },
     },
     { timestamps: true }
     
