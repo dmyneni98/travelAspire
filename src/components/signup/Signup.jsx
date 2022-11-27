@@ -31,10 +31,10 @@ const Signup = () =>{
     <div className="loginContainer">
       <div className="loginWrapper">
          <form className="loginform" onSubmit={handleClick}>
-          <div className="loginTitle">Sign in</div>
+          <div className="loginTitle">Register</div>
           <div>
-          <input className="loginInput" type="email" placeholder="" onChange={handleChange} id="email" name="email"/>
-          <input className="loginInput" type="password" placeholder="" onChange={handleChange} id="password" name="password"/>
+          <input className="loginInput" type="email" placeholder="email" onChange={handleChange} id="email" name="email"/>
+          <input className="loginInput" type="password" placeholder="password" onChange={handleChange} id="password" name="password"/>
           <input className="loginInput" type="text" placeholder="First Name" onChange={handleChange} id="firstname" name="firstname"/> 
           <input className="loginInput" type="text" placeholder="Middle Name" onChange={handleChange} id="middlename" name="middlename"/>
           <input className="loginInput" type="text" placeholder="Last Name" onChange={handleChange} id="lastname" name="lastname"/>
@@ -50,7 +50,7 @@ const Signup = () =>{
           
 
           </div>
-          <button className="loginButton" type="submit">Login</button>
+          <button className="loginButton" type="submit">Register</button>
       </form>
       </div>
     </div>

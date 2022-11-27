@@ -1,16 +1,16 @@
-import "./home.css"
+
+
 import React from "react"
 import Header from "../../components/header/Header"
-import FlightType from "../../components/flightType/FlightType"
-import FlightSearchBar from "../../components/flightSearchBar/FlightSearchBar"
 
+import FlightSearchBar from "../../components/flightSearchBar/FlightSearchBar"
+import Footer from "../../components/footer/Footer"
 function Home(){
-    return(
+    return( 
         <div >
             <Header/>
-            
-            <FlightType/>
             <FlightSearchBar/>
+            <Footer/>
         </div>
         
     )

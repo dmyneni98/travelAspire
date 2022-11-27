@@ -1,7 +1,5 @@
 import Flight from "../models/Flight.js"
 
-
-
 export const createFlight = async (req,res,next)=>{
     try {
       const newFlight = new Flight({

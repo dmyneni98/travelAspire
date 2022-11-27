@@ -6,10 +6,17 @@ import {
 
 import Home from "./pages/home/Home";
 import FlightList from "./pages/flights/FlightList";
-import Feedback from "./pages/Feedback/Feedback";
+
 import Login from "./pages/login/Login"
 import Signme from "./pages/signup/Signup";
-import DealList from "./pages/deals/Deals"
+import DealList from "./pages/deals/Deals";
+import FlightSearchResult from "./pages/flightsResult/FlightSearchResult";
+import Feedback from "./pages/Feedback/Feedback";
+
+import FlightReserveRW from "./pages/flightResearve/FlightReserveRW"
+import FlightReserveOW from "./pages/flightResearve/FlightReserveOW";
+import OrderFlight from "./pages/orderFlight/OrderFlight";
+
 
 
 function App() {
@@ -17,11 +24,15 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/flightList" element={<FlightList />} />
         <Route path="/feedback" element={<Feedback/>} />
         <Route path="/login" element={<Login/>} />
-        <Route path="/signup" element={<Signme/>} />
+        <Route path="/register" element={<Signme/>} />
         <Route path="/deals" element={<DealList/>} />
+        <Route path="/flightList" element={<FlightSearchResult />} />
+        <Route path="/flightCheckout" element={<OrderFlight/>}/>   
+        <Route path="/flightReserve-roundway" element={<FlightReserveRW />} />
+        <Route path="/flightReserve-onedway" element={<FlightReserveOW/>} />
+        <Route path="/feedback" element={<Feedback/>} />
       </Routes>
     </BrowserRouter>
   );

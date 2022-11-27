@@ -16,7 +16,7 @@ function Navbar () {
             <button className="navButton">Login</button>
             </Link>
             
-            <Link to="/signup">
+            <Link to="/register">
             <button className="navButton">Sign Up</button>
             </Link>
         </div>
