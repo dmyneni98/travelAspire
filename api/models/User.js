@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const UserSchema = new mongoose.Schema(
   {
    
-    email: {
+    username: {
       type: String,
       required: true,
       unique: true,
@@ -16,6 +16,11 @@ const UserSchema = new mongoose.Schema(
         type: String,
         
       }, 
+      email: {
+        type: String,
+        
+        
+      },
       lastname:{
         type:String
       },
@@ -54,7 +59,7 @@ const UserSchema = new mongoose.Schema(
       },
       mileage:{
         type:Number,
-        required: true,
+       
     },
       flightOrder:{
           type: [

@@ -5,7 +5,8 @@ import {
 from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../flightSearchBar/flightSearchBar.css";
-import "./list.css"
+import "./Deals";
+
 import React, { useState } from "react";
 import axios from "axios";
 

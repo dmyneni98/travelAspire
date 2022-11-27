@@ -28,16 +28,20 @@ function Header(){
                 </Link>
               </div>
               <div className="headerListItem">
+              <Link to="/hotels" className="link">
                 <FontAwesomeIcon icon={faBed} />
                 <span>Hotels</span>
+              </Link>  
               </div>
               <div className="headerListItem">
                 <FontAwesomeIcon icon={faGlobe} />
                 <span>Flight+Hotel</span>
               </div>
               <div className="headerListItem">
+              <Link to="/deals" className="link">
                 <FontAwesomeIcon icon={faPiggyBank} />
                 <span>Find deals</span>
+               </Link> 
               </div>
               <div className="headerListItem">
                 <Link to="/flightStatus" className="link">

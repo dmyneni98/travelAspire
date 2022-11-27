@@ -16,8 +16,9 @@ import Feedback from "./pages/Feedback/Feedback";
 import FlightReserveRW from "./pages/flightResearve/FlightReserveRW"
 import FlightReserveOW from "./pages/flightResearve/FlightReserveOW";
 import OrderFlight from "./pages/orderFlight/OrderFlight";
-import Hotel from "./pages/hotel/Hotel";
 
+import Hotel from "./pages/hotel/Hotel";
+import List from "./pages/list/List";
 
 
 function App() {

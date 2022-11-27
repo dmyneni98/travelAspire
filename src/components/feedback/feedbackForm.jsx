@@ -18,7 +18,7 @@ function FeedbackForm(){
             rating: rating,
             comment: comment
         }
-        fetch(`/feedback`,{
+        fetch(`http://localhost:8800/feedback`,{
             method: 'POST', // or 'PUT'
             headers: {
               'Content-Type': 'application/json',

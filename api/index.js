@@ -27,8 +27,8 @@ app.use(cors())
 app.use("/auth", authRoute);
 app.use("/users", usersRoute);
 app.use("/deals", dealsRoute);
-app.use("/api/flights",flightRouter);
-app.use("/api/feedback",feedbackRouter);      
+app.use("/flights",flightRouter);
+app.use("/feedback",feedbackRouter);      
 
 app.get("/",(req,res)=> {
   res.send("welcome back!!!")

@@ -36,9 +36,9 @@ function OrderFlight(){
 
     useEffect(()=>{
         Promise.all([
-            fetch(`/flights?_id=${flightsOrder[0]}`),
-            fetch(`/flights?_id=${flightsOrder[1]}`),
-            fetch(`/users?username=${userName}`),
+            fetch(`http://localhost:8800/flights?_id=${flightsOrder[0]}`),
+            fetch(`http://localhost:8800/flights?_id=${flightsOrder[1]}`),
+            fetch(`http://localhost:8800/users?username=${userName}`),
           ]).then(async([aa, bb, cc]) => {
             const a = await aa.json();
             const b = await bb.json();
@@ -75,7 +75,7 @@ function OrderFlight(){
         flightsList.map((flight)=>(
             flightData = {flight:flight._id, numPassenger : number.passenger },  
             flightReservation.push(flightData)))  
-        fetch(`/users/${userId._id}`,{
+        fetch(`http://localhost:8800/users/${userId._id}`,{
             method: 'PUT', // or 'PUT'
             headers: {'Content-Type': 'application/json',},
             body: JSON.stringify({
@@ -97,7 +97,7 @@ function OrderFlight(){
                 numPassenger : number.passenger },
             passengerList = flight.passengers,
             passengerList.push(userInfo),
-            fetch(`/flights/${flight._id}`,{
+            fetch(`http://localhost:8800/flights/${flight._id}`,{
                 method: 'PUT', // or 'PUT'
                 headers: {'Content-Type': 'application/json',},
                 body: JSON.stringify({ "passengers": passengerList, }),

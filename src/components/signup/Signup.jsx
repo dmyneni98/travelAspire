@@ -33,7 +33,8 @@ const Signup = () =>{
          <form className="loginform" onSubmit={handleClick}>
           <div className="loginTitle">Register</div>
           <div>
-          <input className="loginInput" type="email" placeholder="email" onChange={handleChange} id="email" name="email"/>
+          
+          <input className="loginInput" type="text" placeholder="username" onChange={handleChange} id="username" name="username"/>
           <input className="loginInput" type="password" placeholder="password" onChange={handleChange} id="password" name="password"/>
           <input className="loginInput" type="text" placeholder="First Name" onChange={handleChange} id="firstname" name="firstname"/> 
           <input className="loginInput" type="text" placeholder="Middle Name" onChange={handleChange} id="middlename" name="middlename"/>
@@ -43,6 +44,7 @@ const Signup = () =>{
           <input className="loginInput" type="text" placeholder="City" onChange={handleChange} id="city" name="city"/>
           <input className="loginInput" type="text" placeholder="State" onChange={handleChange} id="state" name=""/>
           <input className="loginInput" type="text" placeholder="Zip Code" onChange={handleChange} id="zipcode" name=""/>
+          <input className="loginInput" type="email" placeholder="email" onChange={handleChange} id="email" name="email"/>
           <input className="loginInput" type="text" placeholder="Credit Card Number" onChange={handleChange} id="creditcardnum" name="creditcardnum"/>
           <input className="loginInput" type="text" placeholder="Name on the Card" onChange={handleChange} id="creditname" name="creditname"/>
           <input className="loginInput" type="text" placeholder="Expiration Date" onChange={handleChange} id="creditexpdate" name="creditexpdate"/>

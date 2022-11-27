@@ -12,7 +12,7 @@ function FlightReserveOW(){
     const [flightsOrder, setFlightsOrder] = useState(location.state.flightsOrder)
     const [number, setNumber] = useState(location.state.number);
 
-    const { data, loading, error} = useFetch(`/flights?_id=${flightsOrder[0]}`)
+    const { data, loading, error} = useFetch(`http://localhost:8800/flights?_id=${flightsOrder[0]}`)
 
     let totalPrice = 0
     const getTotalPrice = (itemprice)=>{
@@ -20,7 +20,11 @@ function FlightReserveOW(){
     }
 
     const handleReserve = ()=>{
+        
+        if(localStorage.getItem("user") != null)
         navigate("/flightCheckout",{state:{flightsOrder,number}});
+        else
+        navigate("/login");
     }
   
     return (
