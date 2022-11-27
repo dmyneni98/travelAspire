@@ -34,7 +34,12 @@ const UserSchema = new mongoose.Schema(
         type:String
       },
       city:{
-        type:String
+        type:String,
+        required: true,
+      },
+      phone: {
+      type: String,
+      required: true,
       },
       state:{
         type:String
@@ -56,6 +61,10 @@ const UserSchema = new mongoose.Schema(
       },
       creditzip:{
         type:String
+      },
+      isAdmin: {
+        type: Boolean,
+        default: false,
       },
       mileage:{
         type:Number,
