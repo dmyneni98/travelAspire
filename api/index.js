@@ -5,6 +5,9 @@ import usersRoute from "./routes/users.js";
 import dealsRoute from "./routes/deals.js";
 import flightRouter from "./routes/flights.js";
 import feedbackRouter from "./routes/feedback.js";
+import hotelsRoute from "./routes/hotels.js";
+import roomsRoute from "./routes/rooms.js";
+import cookieParser from "cookie-parser";
 import cors from "cors";
 
 const app= express();
@@ -28,7 +31,9 @@ app.use("/auth", authRoute);
 app.use("/users", usersRoute);
 app.use("/deals", dealsRoute);
 app.use("/flights",flightRouter);
-app.use("/feedback",feedbackRouter);      
+app.use("/feedback",feedbackRouter);    
+app.use("/hotels", hotelsRoute);
+app.use("/rooms", roomsRoute);  
 
 app.get("/",(req,res)=> {
   res.send("welcome back!!!")
