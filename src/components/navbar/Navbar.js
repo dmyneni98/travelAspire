@@ -17,7 +17,7 @@ function Navbar () {
           <span className="logo">Trip Aspire</span>
         </Link>
         <div className="navItems">
-        <span>{localStorage.getItem("user")}</span>
+        {/* <span>{localStorage.getItem("user")}</span> */}
           {localStorage.getItem("user") == ""?(<Link to="/login">
             <button className="navButton">Login</button>
             </Link>): (

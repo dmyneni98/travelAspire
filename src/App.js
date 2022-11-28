@@ -36,7 +36,7 @@ function App() {
         <Route path="/flightReserve-onedway" element={<FlightReserveOW/>} />
         <Route path="/feedback" element={<Feedback/>} />
         <Route path="/hotelsearch" element={<HotelSearchBar/>}/>
-        <Route path="/hotels" element={<List/>}/>
+        <Route path="/hotellist" element={<List/>}/>
         <Route path="/hotels/:id" element={<Hotel/>}/>
       </Routes>
     </BrowserRouter>
