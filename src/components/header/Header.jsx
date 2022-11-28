@@ -28,7 +28,7 @@ function Header(){
                 </Link>
               </div>
               <div className="headerListItem">
-              <Link to="/hotels" className="link">
+              <Link to="/hotelsearch" className="link">
                 <FontAwesomeIcon icon={faBed} />
                 <span>Hotels</span>
               </Link>  

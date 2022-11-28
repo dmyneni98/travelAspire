@@ -16,7 +16,7 @@ import Feedback from "./pages/Feedback/Feedback";
 import FlightReserveRW from "./pages/flightResearve/FlightReserveRW"
 import FlightReserveOW from "./pages/flightResearve/FlightReserveOW";
 import OrderFlight from "./pages/orderFlight/OrderFlight";
-
+import HotelSearchBar from "./pages/hotelSearchBar/HotelSearchBar";
 import Hotel from "./pages/hotel/Hotel";
 import List from "./pages/list/List";
 
@@ -35,6 +35,7 @@ function App() {
         <Route path="/flightReserve-roundway" element={<FlightReserveRW />} />
         <Route path="/flightReserve-onedway" element={<FlightReserveOW/>} />
         <Route path="/feedback" element={<Feedback/>} />
+        <Route path="/hotelsearch" element={<HotelSearchBar/>}/>
         <Route path="/hotels" element={<List/>}/>
         <Route path="/hotels/:id" element={<Hotel/>}/>
       </Routes>
