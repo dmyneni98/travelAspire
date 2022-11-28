@@ -1,4 +1,5 @@
 import User from "../models/User.js";
+import flight from "../models/Flight.js"
 export const updateUser = async (req,res,next)=>{
     try {
       const updatedUser = await User.findByIdAndUpdate(
@@ -35,3 +36,17 @@ export const updateUser = async (req,res,next)=>{
       next(err);
     }
   }
+
+  export const getBooking = async (req, res, next) => {
+    try {
+      const user = await User.findById(req.params.id);
+      const list = await Promise.all(
+        user.flightOrder.map((flight) => {
+          return flight.findById(flight);
+        })
+      );
+      res.status(200).json(list)
+    } catch (err) {
+      next(err);
+    }
+  };

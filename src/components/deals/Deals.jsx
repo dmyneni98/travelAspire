@@ -10,6 +10,7 @@ import "./Deals";
 import React, { useState } from "react";
 import axios from "axios";
 
+
 export const DealsList = ()=>{
     const [searchinput, setSearchinput] = useState({
         destination: undefined,
@@ -18,7 +19,8 @@ export const DealsList = ()=>{
     });
     
     const [data, setData] = useState([]);
-
+    const [msg, setMsg] = useState(""); 
+ 
     const handleChange = (e) => {
         setSearchinput((prev) => ({ ...prev, [e.target.id]: e.target.value }));
       };
@@ -32,6 +34,10 @@ export const DealsList = ()=>{
           //dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
           //navigate("/");
           setData(res.data); 
+          if(data.length==0)
+          {
+            setMsg("We don't have any flights matching your search on our site. Try changing some details.")
+          }
          
         } catch (err) {
             console.log("Unable to authnticate")
@@ -47,14 +53,14 @@ export const DealsList = ()=>{
                     <FontAwesomeIcon icon={faPlane} className="searchIcon" />   
                    Destination: <input type="text" placeholder="Where to?" className="searchInput" id="destination" name="destination" onChange={handleChange}/>
             </div>
-            <div class="flightSearch">
+            
             <div class="flightSearchItem">
             Price: <input type="number" placeholder="Min Price" className="searchInput" id="min" name="min" onChange={handleChange}/>
             </div>
             <div class="flightSearchItem">
                 <input type="number" placeholder="Max Price" className="searchInput" id="max" name="min" onChange={handleChange}/>
             </div>
-            </div>
+            
             <div className="flightSearchItem">
                     <button className="flight-buttom" onClick={handleClick}>
                     Search
@@ -65,22 +71,39 @@ export const DealsList = ()=>{
    
         </div> 
         <div class="flightSearchContainer">
-        <div >
-         <table class="flightResult"><th>Airlines</th><th>Source</th><th>destination</th><th>Depart Date</th><th>Arival Date</th><th>Price</th>
-         {data.map((item) => (
-         <div class="flightSearchItem">
-        <tr><td>{item.name}</td>
-        <td>{item.origin}</td>
-        <td>{item.destination}</td>
-        <td>{item.starttime}</td>
-        <td>{item.endtime}</td>
-        <td>{item.price}</td>
-        </tr>
-        </div>                 
-        ))}
+        {
+         (
+          data.length ? <>  
+              {data.map((item) => 
+                  <span className="flightItemContainer">
+                  <span className="partItemContainer">
+                  <div className="textInfo">
+                     Airlines :{item.name} </div>
+                  <div className="textInfo">
+                  departAirport : {item.origin}
+                  </div>
+                  <div className="textInfo">
+                  arriveAirport : {item.destination}
+                  </div>
+                  <div className="textInfo">
+                     Price : {item.price}
+                  </div>
+                  <div className="textInfo">
+                     Departing Time : {item.starttime}
+                  </div>
+                  <div className="textInfo">
+                     Arrival Time : {item.endtime}
+                  </div>
+                  </span>  
+                  </span>
+              )}
+          </>: <div className="sortingText">{msg} </div>
+          )
 
-         </table>   
-        </div>
+        }
+        
+
+        
         </div>
         </div>        
         

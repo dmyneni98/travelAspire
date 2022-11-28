@@ -1,9 +1,15 @@
 import "./navbar.css"
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function Navbar () {
-
+  const navigate = useNavigate()
+  const handleClick = async (e) => {
+    localStorage.setItem("user","")
+    localStorage.setItem("userid","")
+    navigate("/")
+  }
   return (
     <div className="navbar">
       <div className="navContainer">
@@ -11,10 +17,16 @@ function Navbar () {
           <span className="logo">Trip Aspire</span>
         </Link>
         <div className="navItems">
-          <span>{localStorage.getItem("user")}</span>
-          <Link to="/login">
+        <span>{localStorage.getItem("user")}</span>
+          {localStorage.getItem("user") == ""?(<Link to="/login">
             <button className="navButton">Login</button>
-            </Link>
+            </Link>): (
+          
+            <button className="navButton" onClick={handleClick}>Logout</button>
+            )
+            
+          }
+   
             
             <Link to="/register">
             <button className="navButton">Sign Up</button>

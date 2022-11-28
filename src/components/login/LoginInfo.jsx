@@ -12,7 +12,7 @@ const LoginInfo = () => {
   });
 
   const { loading, error, dispatch } = useContext(AuthContext);
-
+   
   const navigate = useNavigate()
 
   const handleChange = (e) => {
